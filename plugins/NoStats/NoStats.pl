@@ -8,7 +8,7 @@ use base qw( MT::Plugin );
 use MT;
 
 use vars qw( $VERSION $PLUGIN_ID );
-$VERSION = '0.1';
+$VERSION = '0.2';
 $PLUGIN_ID = 'no_stats';
 
 my $plugin = MT::Plugin::NoStats->new ({
@@ -39,10 +39,11 @@ sub init_registry {
 sub initialize {
 	my $plugin = shift;
 	my ($app) = @_;
-	my $mt_generate_dashboard_stats = \&MT::App::CMS::generate_dashboard_stats;
+	require MT::CMS::Dashboard;
+	my $mt_generate_dashboard_stats = \&MT::CMS::Dashboard::generate_dashboard_stats;
 	{
 		local $SIG{__WARN__} = sub {  };
-		*MT::App::CMS::generate_dashboard_stats = \&generate_dashboard_stats;
+		*MT::CMS::Dashboard::generate_dashboard_stats = \&generate_dashboard_stats;
 	
 	}
 }
