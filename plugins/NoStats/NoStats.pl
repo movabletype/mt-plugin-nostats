@@ -39,14 +39,13 @@ sub init_registry {
 sub initialize {
 	my $plugin = shift;
 	my ($app) = @_;
-	require MT::CMS::Dashboard;
-	eval { require MT::App::Community::CMS; };
+	eval { require MT::Community::CMS; };
 	if (!$@) {
-		my $mt_most_popular_entries_widget = \&MT::CMS::Dashboard::most_popular_entries_widget;
+		my $mt_most_popular_entries_widget = \&MT::Community::CMS::most_popular_entries_widget;
 		{
 			local $SIG{__WARN__} = sub {  };
-			*MT::CMS::Dashboard::most_popular_entries_widget = \&most_popular_entries_widget;	
-		}		
+			*MT::Community::CMS::most_popular_entries_widget = \&most_popular_entries_widget;	
+		}
 	}
 	my $mt_generate_dashboard_stats = \&MT::CMS::Dashboard::generate_dashboard_stats;
 	{
