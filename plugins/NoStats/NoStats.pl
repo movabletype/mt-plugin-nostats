@@ -7,7 +7,7 @@ use base qw( MT::Plugin );
 use MT;
 
 use vars qw( $VERSION $PLUGIN_ID );
-$VERSION = '0.31';
+$VERSION = '0.32';
 $PLUGIN_ID = 'no_stats';
 
 my $plugin = MT::Plugin::NoStats->new ({
@@ -16,8 +16,8 @@ my $plugin = MT::Plugin::NoStats->new ({
     description => 'No stats!',
     version     => $VERSION,
 
-    author_name => 'Apperceptive, LLC',
-    author_link => 'http://www.apperceptive.com/',
+    author_name => 'Six Apart',
+    author_link => 'http://www.sixapart.com/',
 });
 MT->add_plugin ($plugin);
 
@@ -25,7 +25,7 @@ sub init_registry {
     my $component = shift;
     my $reg = {
 
-        author      => 'Apperceptive, LLC',
+        author      => 'Six Apart',
         init_app            => \&initialize,
         callbacks => {
             'MT::App::CMS::template_source.blog_stats'   => \&source_dashboard,
