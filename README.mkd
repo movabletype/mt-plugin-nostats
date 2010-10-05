@@ -1,7 +1,9 @@
 # OrderedTags
 
 Author: Six Apart
+
 Copyright 2010 Six Apart, Ltd.
+
 License: GPL
 
 
