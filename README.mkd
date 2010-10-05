@@ -1,0 +1,15 @@
+# OrderedTags
+
+Author: Six Apart
+Copyright 2010 Six Apart, Ltd.
+License: GPL
+
+
+## Overview
+
+Removes the statistics chart from the Movable Type dashboard.
+
+
+## Support
+
+This plugin is not an official Six Apart release, and as such support from Six Apart for this plugin is not available.
