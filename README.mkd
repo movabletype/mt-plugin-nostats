@@ -1,4 +1,4 @@
-# OrderedTags
+# NoStats
 
 Author: Six Apart
 

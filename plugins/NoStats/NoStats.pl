@@ -29,7 +29,7 @@ my $plugin = MT::Plugin::NoStats->new ({
     version     => $VERSION,
 
     author_name => 'Six Apart',
-    author_link => 'http://www.sixapart.com/',
+    author_link => 'http://www.movabletype.org/',
 });
 MT->add_plugin ($plugin);
 
